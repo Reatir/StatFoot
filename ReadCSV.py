@@ -3,12 +3,12 @@ import StatFoot.CSaison
 import StatFoot.CDivision
 import StatFoot.Cmatch
 
-saison = StatFoot.CSaison.CSaison()
+class readcsv(object):
 
-def readCSV():
+    def readCSV(self,path):
 
         division = StatFoot.CDivision.CDivision()
-        with open('F1.csv') as csv_file:
+        with open(path) as csv_file:
             csv_reader = csv.DictReader(csv_file)
             line_count = 0
             for row in csv_reader:
@@ -21,9 +21,4 @@ def readCSV():
                     division.add_match(match)
                 line_count += 1
 
-        saison.add_division(division)
-
-
-
-readCSV()
-
+        return division
