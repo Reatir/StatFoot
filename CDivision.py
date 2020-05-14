@@ -1,4 +1,4 @@
-
+import StatFoot.Cequipe
 
 class CDivision(object):
 
